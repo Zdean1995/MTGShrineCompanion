@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFD0AE21</color>
+    <color name="purple_500">#FFD0AE21</color>
+    <color name="purple_700">#FFD0AE21</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="cardGreen">#FF0C7512</color>
+    <color name="cardGreenPressed">#FF08430A</color>
+    <color name="cardRed">#FFDA0606</color>
+    <color name="cardRedPressed">#FF870A0A</color>
+    <color name="cardBlack">#FF5D036A</color>
+    <color name="cardBlackPressed">#FF36043D</color>
+    <color name="cardWhite">#FFEEF3A5</color>
+    <color name="cardWhitePressed">#FFB6B987</color>
+    <color name="cardBlue">#FF103AB5</color>
+    <color name="cardBluePressed">#FF0F266A</color>
+    <color name="cardGold">#FFFFC300 </color>
+    <color name="cardGoldPressed">#FFA47D00 </color>
+    <color name="background">#FF873600</color>
+    <color name="backgroundScroll">#FFEDBB99</color>
+</resources>

@@ -1,0 +1,42 @@
+<resources>
+    <plurals name="m21_green_effect">
+        <item quantity="one">Ajoutez %d mana de la couleur de votre choix.</item>
+        <item quantity="many">Ajoutez %d manas de la couleur de votre choix</item>
+        <item quantity="other">Ajoutez %d manas de la couleur de votre choix</item>
+    </plurals>
+    <plurals name="m21_blue_effect">
+        <item quantity="one">Vous pouvez piocher %d carte, Si vous faites ainsi, défaussez-vous d\'une carte</item>
+        <item quantity="many">Vous pouvez piocher %d cartes, Si vous faites ainsi, défaussez-vous d\'une cart</item>
+        <item quantity="other">Vous pouvez piocher %d cartes, Si vous faites ainsi, défaussez-vous d\'une cart</item>
+    </plurals>
+    <plurals name="neo_white_effect">
+        <item quantity="one">Créez %d jeton de créature spirituelle 1/1 incolore</item>
+        <item quantity="many">Créez %d jetons de créature spirituelle 1/1 incolore</item>
+        <item quantity="other">Créez %d jetons de créature spirituelle 1/1 incolore</item>
+    </plurals>
+    <plurals name="neo_blue_effect">
+        <item quantity="one">Un joueur ciblé meule %d carte</item>
+        <item quantity="many">Un joueur ciblé meule %d cartes</item>
+        <item quantity="other">Un joueur ciblé meule %d cartes</item>
+    </plurals>
+    <plurals name="neo_green_effect">
+        <item quantity="one">Mettez %d marqueur +1/+1 sur un reliquaire ciblé que vous contrôlez</item>
+        <item quantity="many">Mettez %d marqueurs +1/+1 sur un reliquaire ciblé que vous contrôlez</item>
+        <item quantity="other">Mettez %d marqueurs +1/+1 sur un reliquaire ciblé que vous contrôlez</item>
+    </plurals>
+    <plurals name="chk_blue_effect">
+        <item quantity="one">Piochez %d carte</item>
+        <item quantity="many">Piochez %d cartes</item>
+        <item quantity="other">Piochez %d cartes</item>
+    </plurals>
+    <plurals name="chk_black_effect">
+        <item quantity="one">L\'adversaire ciblé se défausse %d carte</item>
+        <item quantity="many">L\'adversaire ciblé se défausse %d cartes</item>
+        <item quantity="other">L\'adversaire ciblé se défausse %d cartes</item>
+    </plurals>
+    <plurals name="chk_green_effect">
+        <item quantity="one">Créez %d jeton de créature spirituelle 1/1 incolore</item>
+        <item quantity="many">Créez %d jetons de créature spirituelle 1/1 incolore</item>
+        <item quantity="other">Créez %d jetons de créature spirituelle 1/1 incolore</item>
+    </plurals>
+</resources>

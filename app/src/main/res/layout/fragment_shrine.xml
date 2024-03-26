@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center_horizontal"
+    tools:context=".ShrineFragment">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.auchtermuchty.shrine.model.ShrineViewModel" />
+
+        <variable
+            name="shrineFragment"
+            type="com.auchtermuchty.shrine.ShrineFragment" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/background">
+
+        <Button
+            android:id="@+id/btn_life_origin"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="2dp"
+            android:backgroundTint="@{viewModel.lifesOriginVisible ? @color/cardGoldPressed : @color/cardGold}"
+            android:onClick="@{() -> viewModel.lifesOriginBtn()}"
+            android:text="@string/btn_life_origin"
+            android:textColor="#455A64"
+            app:layout_constraintBottom_toTopOf="@+id/btn_token_plus"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btn_sac_all"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="2dp"
+            android:backgroundTint="@{viewModel.sacAllVisible ? @color/cardGoldPressed : @color/cardGold}"
+            android:onClick="@{() -> viewModel.sacAllBtn()}"
+            android:text="@string/btn_sac_all"
+            android:textColor="#455A64"
+            app:layout_constraintBottom_toTopOf="@+id/btn_life_origin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btn_m21_green"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@{viewModel.m21GreenVisible ? @color/cardGreenPressed : @color/cardGreen}"
+            android:onClick="@{() -> viewModel.m21GreenBtn()}"
+            app:icon="@drawable/m21"
+            app:iconGravity="textTop"
+            app:iconPadding="0dp"
+            app:iconSize="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_sac_all"
+            app:layout_constraintEnd_toStartOf="@+id/btn_neo_green"
+            app:layout_constraintStart_toEndOf="@+id/btn_chk_green" />
+
+        <Button
+            android:id="@+id/btn_neo_green"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@{viewModel.neoGreenVisible ? @color/cardGreenPressed : @color/cardGreen}"
+            android:onClick="@{() -> viewModel.neoGreenBtn()}"
+            app:icon="@drawable/neo"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_sac_all"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_m21_green" />
+
+        <Button
+            android:id="@+id/btn_chk_green"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@{viewModel.chkGreenVisible ? @color/cardGreenPressed : @color/cardGreen}"
+            android:onClick="@{() -> viewModel.chkGreenBtn()}"
+            app:icon="@drawable/chk"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_sac_all"
+            app:layout_constraintEnd_toStartOf="@+id/btn_m21_green"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btn_m21_red"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="2dp"
+            android:backgroundTint="@{viewModel.m21RedVisible ? @color/cardRedPressed : @color/cardRed}"
+            android:onClick="@{() -> viewModel.m21RedBtn()}"
+            app:icon="@drawable/m21"
+            app:iconGravity="textTop"
+            app:iconPadding="0dp"
+            app:iconSize="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_m21_green"
+            app:layout_constraintEnd_toStartOf="@+id/btn_neo_red"
+            app:layout_constraintStart_toEndOf="@+id/btn_chk_red" />
+
+        <Button
+            android:id="@+id/btn_neo_red"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="2dp"
+            android:backgroundTint="@{viewModel.neoRedVisible ? @color/cardRedPressed : @color/cardRed}"
+            android:onClick="@{() -> viewModel.neoRedBtn()}"
+            app:icon="@drawable/neo"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_neo_green"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_m21_red" />
+
+        <Button
+            android:id="@+id/btn_chk_red"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="2dp"
+            android:backgroundTint="@{viewModel.chkRedVisible ? @color/cardRedPressed : @color/cardRed}"
+            android:onClick="@{() -> viewModel.chkRedBtn()}"
+            app:icon="@drawable/chk"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_chk_green"
+            app:layout_constraintEnd_toStartOf="@+id/btn_m21_red"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btn_m21_black"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="2dp"
+            android:backgroundTint="@{viewModel.m21BlackVisible ? @color/cardBlackPressed : @color/cardBlack}"
+            android:onClick="@{() -> viewModel.m21BlackBtn()}"
+            app:icon="@drawable/m21"
+            app:iconGravity="textTop"
+            app:iconPadding="0dp"
+            app:iconSize="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_m21_red"
+            app:layout_constraintEnd_toStartOf="@+id/btn_neo_black"
+            app:layout_constraintStart_toEndOf="@+id/btn_chk_black" />
+
+        <Button
+            android:id="@+id/btn_neo_black"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="2dp"
+            android:backgroundTint="@{viewModel.neoBlackVisible ? @color/cardBlackPressed : @color/cardBlack}"
+            android:onClick="@{() -> viewModel.neoBlackBtn()}"
+            app:icon="@drawable/neo"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_neo_red"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_m21_black" />
+
+        <Button
+            android:id="@+id/btn_chk_black"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="2dp"
+            android:backgroundTint="@{viewModel.chkBlackVisible ? @color/cardBlackPressed : @color/cardBlack}"
+            android:onClick="@{() -> viewModel.chkBlackBtn()}"
+            app:icon="@drawable/chk"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_chk_red"
+            app:layout_constraintEnd_toStartOf="@+id/btn_m21_black"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btn_m21_blue"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="2dp"
+            android:backgroundTint="@{viewModel.m21BlueVisible ? @color/cardBluePressed : @color/cardBlue}"
+            android:onClick="@{() -> viewModel.m21BlueBtn()}"
+            app:icon="@drawable/m21"
+            app:iconGravity="textTop"
+            app:iconPadding="0dp"
+            app:iconSize="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_m21_black"
+            app:layout_constraintEnd_toStartOf="@+id/btn_neo_blue"
+            app:layout_constraintStart_toEndOf="@+id/btn_chk_blue" />
+
+        <Button
+            android:id="@+id/btn_neo_blue"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="2dp"
+            android:backgroundTint="@{viewModel.neoBlueVisible ? @color/cardBluePressed : @color/cardBlue}"
+            android:onClick="@{() -> viewModel.neoBlueBtn()}"
+            app:icon="@drawable/neo"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_neo_black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_m21_blue" />
+
+        <Button
+            android:id="@+id/btn_chk_blue"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="2dp"
+            android:backgroundTint="@{viewModel.chkBlueVisible ? @color/cardBluePressed : @color/cardBlue}"
+            android:onClick="@{() -> viewModel.chkBlueBtn()}"
+            app:icon="@drawable/chk"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_chk_black"
+            app:layout_constraintEnd_toStartOf="@+id/btn_m21_blue"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btn_m21_white"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="2dp"
+            android:backgroundTint="@{viewModel.m21WhiteVisible ? @color/cardWhitePressed : @color/cardWhite}"
+            android:onClick="@{() -> viewModel.m21WhiteBtn()}"
+            app:icon="@drawable/m21"
+            app:iconGravity="textTop"
+            app:iconPadding="0dp"
+            app:iconSize="30dp"
+            app:iconTint="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/btn_m21_blue"
+            app:layout_constraintEnd_toStartOf="@+id/btn_neo_white"
+            app:layout_constraintStart_toEndOf="@+id/btn_chk_white" />
+
+        <Button
+            android:id="@+id/btn_neo_white"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="2dp"
+            android:backgroundTint="@{viewModel.neoWhiteVisible ? @color/cardWhitePressed : @color/cardWhite}"
+            android:onClick="@{() -> viewModel.neoWhiteBtn()}"
+            app:icon="@drawable/neo"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="30dp"
+            app:iconTint="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/btn_neo_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_m21_white" />
+
+        <Button
+            android:id="@+id/btn_chk_white"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="2dp"
+            android:backgroundTint="@{viewModel.chkWhiteVisible ? @color/cardWhitePressed : @color/cardWhite}"
+            android:onClick="@{() -> viewModel.chkWhiteBtn()}"
+            app:icon="@drawable/chk"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="30dp"
+            app:iconTint="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/btn_chk_blue"
+            app:layout_constraintEnd_toStartOf="@+id/btn_m21_white"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btn_token_plus"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="2dp"
+            android:backgroundTint="@color/cardGold"
+            android:onClick="@{() -> shrineFragment.tokenPlus()}"
+            android:text="+"
+            android:textSize="25sp"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/shrine_token_count"
+            app:layout_constraintStart_toEndOf="@id/shrine_token_text" />
+
+        <EditText
+            android:id="@+id/shrine_token_count"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="2dp"
+            android:autofillHints="Number of Shrine Tokens"
+            android:ems="10"
+            android:gravity="center_horizontal|center_vertical"
+            android:inputType="number"
+            android:onTextChanged="@{() -> shrineFragment.tokenChange()}"
+            android:text="0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_token_minus"
+            app:layout_constraintStart_toEndOf="@+id/btn_token_plus"
+            app:layout_constraintTop_toBottomOf="@+id/btn_life_origin" />
+
+        <Button
+            android:id="@+id/btn_token_minus"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="2dp"
+            android:backgroundTint="@color/cardGold"
+            android:onClick="@{() -> shrineFragment.tokenMinus()}"
+            android:text="-"
+            android:textSize="25sp"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_reset"
+            app:layout_constraintStart_toEndOf="@+id/shrine_token_count" />
+
+        <TextView
+            android:id="@+id/shrine_token_text"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginBottom="2dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:labelFor="@id/shrine_token_count"
+            android:text="@string/shrine_tokens"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_token_plus"
+            app:layout_constraintStart_toStartOf="@+id/btn_chk_green"
+            app:layout_constraintTop_toBottomOf="@+id/btn_life_origin" />
+
+        <ScrollView
+            android:id="@+id/effectScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/backgroundScroll"
+            app:layout_constraintBottom_toTopOf="@+id/shrine_count_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/sac_all_ability"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/sac_all_ability"
+                    android:textStyle="bold"
+                    android:visibility="@{viewModel.sacAllAbilityVisible ? View.VISIBLE : View.GONE}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/upkeep_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/upkeep"
+                    android:textStyle="bold"
+                    android:visibility="@{viewModel.upkeepVisible ? View.VISIBLE : View.GONE}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sac_all_ability" />
+
+                <TextView
+                    android:id="@+id/sac_all_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@{@string/sac_all_effect}"
+                    android:visibility="@{viewModel.sacAllVisible ? View.VISIBLE : View.GONE}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/upkeep_text" />
+
+                <TextView
+                    android:id="@+id/chk_white_effect_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@{@string/chk_white_effect(viewModel.shrineCount*2)}"
+                    android:visibility="@{viewModel.chkWhiteVisible ? View.VISIBLE : View.GONE}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sac_all_text" />
+
+                <TextView
+                    android:id="@+id/chk_blue_effect_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@{@plurals/chk_blue_effect(viewModel.shrineCount, viewModel.shrineCount)}"
+                    android:visibility="@{viewModel.chkBlueVisible ? View.VISIBLE : View.GONE}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/chk_white_effect_text" />
+
+                <TextView
+                    android:id="@+id/chk_black_effect_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@{@plurals/chk_black_effect(viewModel.shrineCount,viewModel.shrineCount)}"
+                    android:visibility="@{viewModel.chkBlackVisible ? View.VISIBLE : View.GONE}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/chk_blue_effect_text" />
+
+                <TextView
+                    android:id="@+id/chk_red_effect_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@{@string/chk_red_effect(viewModel.shrineCount)}"
+                    android:visibility="@{viewModel.chkRedVisible ? View.VISIBLE : View.GONE}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/chk_black_effect_text" />
+
+                <TextView
+                    android:id="@+id/chk_green_effect_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@{@plurals/chk_green_effect(viewModel.shrineCount, viewModel.shrineCount)}"
+                    android:visibility="@{viewModel.chkGreenVisible ? View.VISIBLE : View.GONE}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/chk_red_effect_text" />
+
+                <TextView
+                    android:id="@+id/precombat_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/precombat"
+                    android:textStyle="bold"
+                    android:visibility="@{viewModel.precombatVisible ? View.VISIBLE : View.GONE}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/chk_green_effect_text" />
+
+                <TextView
+                    android:id="@+id/m21_blue_effect_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@{@plurals/m21_blue_effect(viewModel.shrineCount,viewModel.shrineCount)}"
+                    android:visibility="@{viewModel.m21BlueVisible ? View.VISIBLE : View.GONE}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/precombat_text" />
+
+                <TextView
+                    android:id="@+id/m21_black_effect_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@{@string/m21_black_effect(viewModel.shrineCount,viewModel.shrineCount)}"
+                    android:visibility="@{viewModel.m21BlackVisible ? View.VISIBLE : View.GONE}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/m21_blue_effect_text" />
+
+                <TextView
+                    android:id="@+id/m21_green_effect_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@{@plurals/m21_green_effect(viewModel.shrineCount, viewModel.shrineCount)}"
+                    android:visibility="@{viewModel.m21GreenVisible ? View.VISIBLE : View.GONE}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/m21_black_effect_text" />
+
+                <TextView
+                    android:id="@+id/end_step_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/end_step"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:visibility="@{viewModel.endstepVisible ? View.VISIBLE : View.GONE}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/m21_green_effect_text" />
+
+                <TextView
+                    android:id="@+id/neo_white_effect_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@{@plurals/neo_white_effect(viewModel.shrineCount, viewModel.shrineCount)}"
+                    android:visibility="@{viewModel.neoWhiteVisible ? View.VISIBLE : View.GONE}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/end_step_text" />
+
+                <TextView
+                    android:id="@+id/neo_blue_effect_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@{@plurals/neo_blue_effect(viewModel.shrineCount, viewModel.shrineCount)}"
+                    android:visibility="@{viewModel.neoBlueVisible ? View.VISIBLE : View.GONE}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/neo_white_effect_text" />
+
+                <TextView
+                    android:id="@+id/neo_black_effect_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@{@string/neo_black_effect(viewModel.shrineCount)}"
+                    android:visibility="@{viewModel.neoBlackVisible ? View.VISIBLE : View.GONE}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/neo_blue_effect_text" />
+
+                <TextView
+                    android:id="@+id/neo_red_effect_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@{@string/neo_red_effect(viewModel.shrineCount)}"
+                    android:visibility="@{viewModel.neoRedVisible ? View.VISIBLE : View.GONE}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/neo_black_effect_text" />
+
+                <TextView
+                    android:id="@+id/neo_green_effect_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@{@plurals/neo_green_effect(viewModel.shrineCount, viewModel.shrineCount)}"
+                    android:visibility="@{viewModel.neoGreenVisible ? View.VISIBLE : View.GONE}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/neo_red_effect_text" />
+
+                <TextView
+                    android:id="@+id/noShrines"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/no_shrines"
+                    android:textStyle="bold"
+                    android:visibility="@{viewModel.noShrine ? View.VISIBLE : View.GONE}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/no_shrines_triggers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/no_shrines_with_triggered_abilities"
+                    android:textStyle="bold"
+                    android:visibility="@{viewModel.noShrineTrigger ? View.VISIBLE : View.GONE}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="2dp"
+            android:backgroundTint="@color/cardRed"
+            android:onClick="@{() -> shrineFragment.reset()}"
+            android:text="@string/reset"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/btn_neo_green"
+            app:layout_constraintTop_toBottomOf="@+id/btn_life_origin" />
+
+        <TextView
+            android:id="@+id/shrine_count_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@{@string/shrine_count(viewModel.shrineCount)}"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/btn_m21_white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name" translatable="false">MTG Shrine Companion</string>
+    <string name="btn_life_origin">Life’s Origin</string>
+    <string name="btn_sac_all">Sanctum of All</string>
+    <string name="sac_all_effect">You may search your library or graveyard for a shrine and put it onto the battlefield</string>
+    <string name="shrine_tokens">Tokens</string>
+    <string name="precombat">At the beginning of your precombat main phase</string>
+    <string name="m21_black_effect">Each opponent loses %1$d life and you gain %2$d life</string>
+    <string name="end_step">At the beginning of your end step. Pay 1 for each</string>
+    <string name="neo_black_effect">Destroy target creature with %d or less toughness</string>
+    <string name="neo_red_effect">Go-Shintai of Ancient ways deals %d damage to target player or planeswalker</string>
+    <string name="upkeep">During your upkeep</string>
+    <string name="chk_white_effect">Gain %d life</string>
+    <string name="chk_red_effect">Honden of Infinite Rage deals %d damage to any target</string>
+    <string name="reset">Reset All</string>
+    <string name="shrine_count">Total Shrines: %d</string>
+    <string name="sac_all_ability">Whenever an ability of a shrine (except Sanctum of All) triggers, that ability triggers an additional time</string>
+    <string name="no_shrines">No shrines</string>
+    <string name="no_shrines_with_triggered_abilities">No shrines with triggered abilities</string>
+</resources>
