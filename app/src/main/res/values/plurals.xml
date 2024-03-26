@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="m21_green_effect">
+        <item quantity="one">Add %d mana of any colour</item>
+        <item quantity="other">Add %d mana of any one colour</item>
+    </plurals>
+    <plurals name="m21_blue_effect">
+        <item quantity="one">You may draw %d card then discard a card</item>
+        <item quantity="other">You may draw %d cards then discard a card</item>
+    </plurals>
+    <plurals name="neo_white_effect">
+        <item quantity="one">Create %d 1/1 colorless spirit creature token</item>
+        <item quantity="other">Create %d 1/1 colorless spirit creature tokens</item>
+    </plurals>
+    <plurals name="neo_blue_effect">
+        <item quantity="one">Target player mills %d card</item>
+        <item quantity="other">Target player mills %d cards</item>
+    </plurals>
+    <plurals name="neo_green_effect">
+        <item quantity="one">Put %d +1/+1 counter on target shrine you control</item>
+        <item quantity="other">Put %d +1/+1 counters on target shrine you control</item>
+    </plurals>
+    <plurals name="chk_blue_effect">
+        <item quantity="one">Draw %d card</item>
+        <item quantity="other">Draw %d cards</item>
+    </plurals>
+    <plurals name="chk_black_effect">
+        <item quantity="one">Target opponent discards %d card</item>
+        <item quantity="other">Target opponent discards %d cards</item>
+    </plurals>
+    <plurals name="chk_green_effect">
+        <item quantity="one">Create %d 1/1 colorless spirit creature token</item>
+        <item quantity="other">Create %d 1/1 colorless spirit creature tokens</item>
+    </plurals>
+</resources>

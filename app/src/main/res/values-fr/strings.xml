@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name" translatable="false">MTG Shrine Companion</string>
+    <string name="btn_life_origin">Source de vie</string>
+    <string name="btn_sac_all">Sanctuaire du Grand Tout</string>
+    <string name="sac_all_effect">Chercher dans votre bibliothèque et/ou votre cimetière une carte de reliquaire et la mettre sur le champ de bataille</string>
+    <string name="shrine_tokens">Jetons</string>
+    <string name="precombat">Au début de votre première phase principale</string>
+    <string name="m21_black_effect">Chaque adversaire perd %1$d points de vie et vous gagnez %2$d points</string>
+    <string name="end_step">Au début de votre étape de fin. payer 1 pour chaque</string>
+    <string name="neo_black_effect">Détruisez une créature ciblée avec une endurance inférieure ou égale à %d</string>
+    <string name="neo_red_effect"> Le Goshintai des Guerres anciennes inflige %d blessures à une cible, joueur ou planeswalker</string>
+    <string name="upkeep">Au début de votre entretien</string>
+    <string name="chk_white_effect">Gagnez %d points</string>
+    <string name="chk_red_effect">Honden de la Rage infinie inflige %d dégâts à n\'importe quelle cible</string>
+    <string name="reset">Effacer Tout</string>
+    <string name="shrine_count">Reliquaires totaux: %d</string>
+    <string name="sac_all_ability">Si une capacité d\'un Sanctuaire que vous contrôlez (sauf Sanctuaire du Grand Tout
+) se déclenche alors que vous contrôlez au moins six sanctuaires, cette capacité se déclenche une fois de plus.</string>
+    <string name="no_shrines">Aucun Reliquaire</string>
+    <string name="no_shrines_with_triggered_abilities">Aucun sanctuaire avec des capacités déclenchées</string>
+</resources>
